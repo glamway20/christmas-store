@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مدّات الكريسماس</title>
+
+    <link rel="stylesheet" href="christmas-style.css">
+</head>
+
+<body>
+
+    <!-- رأس الموقع -->
+    <header class="header">
+
+        <div class="logo">
+            🎄 Christmas Store
+        </div>
+
+        <button class="cart-header-btn" id="goToCart">
+            🛒 سلة المشتريات
+            <span id="headerCartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- واجهة الموقع -->
+    <section class="hero">
+
+        <p class="hero-small">CHRISTMAS COLLECTION</p>
+
+        <h1>مدّات الكريسماس</h1>
+
+        <p class="hero-description">
+            اختاري مدّتك المفضلة وكمّلي أجواء العيد بلمسة مميزة ❤️
+        </p>
+
+        <a href="#products" class="hero-button">
+            تسوّقي الآن
+        </a>
+
+    </section>
+
+
+    <!-- المنتجات -->
+    <main class="container" id="products">
+
+        <div class="section-title">
+
+            <h2>اكتشفي مجموعتنا</h2>
+
+            <p>
+                اختاري المنتج والقياس المناسب إلك
+            </p>
+
+        </div>
+
+
+        <div class="products-grid" id="productsGrid">
+
+            <!-- المنتجات رح تنضاف تلقائياً بواسطة JavaScript -->
+
+        </div>
+
+    </main>
+
+
+    <!-- نافذة تفاصيل المنتج -->
+    <div class="modal" id="productModal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+                aria-label="إغلاق"
+            >
+                &times;
+            </button>
+
+
+            <div class="modal-image-container">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt="صورة المنتج"
+                >
+
+            </div>
+
+
+            <div class="modal-details">
+
+                <h2 id="modalName"></h2>
+
+                <p id="modalDescription"></p>
+
+
+                <label for="modalSize">
+                    اختاري القياس
+                </label>
+
+                <select id="modalSize"></select>
+
+
+                <label for="modalQuantity">
+                    الكمية
+                </label>
+
+                <input
+                    type="number"
+                    id="modalQuantity"
+                    min="1"
+                    max="99"
+                    value="1"
+                >
+
+
+                <div class="modal-price-box">
+
+                    <span>السعر الإجمالي</span>
+
+                    <strong id="modalPrice"></strong>
+
+                </div>
+
+
+                <button
+                    class="add-to-cart-btn"
+                    id="addToCartBtn"
+                >
+                    أضيفي إلى السلة 🛍️
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- سلة المشتريات -->
+    <section class="cart-section" id="cart">
+
+        <div class="cart-heading">
+
+            <h2>🛍️ سلة مشترياتك</h2>
+
+            <span id="cartCount">0 قطعة</span>
+
+        </div>
+
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                سلتك فارغة حالياً
+            </p>
+
+        </div>
+
+
+        <div class="cart-total-box">
+
+            <span>إجمالي الطلب</span>
+
+            <strong id="cartTotal">0</strong>
+
+        </div>
+
+
+        <button
+            class="whatsapp-btn"
+            id="checkoutBtn"
+        >
+            إتمام الطلب عبر واتساب 💚
+        </button>
+
+    </section>
+
+
+    <!-- رسالة صغيرة للمستخدم -->
+    <div id="toast" class="toast"></div>
+
+
+    <!-- نهاية الموقع -->
+    <footer class="footer">
+
+        <p>
+            صُنع بحب لأجمل أجواء الكريسماس 🎄
+        </p>
+
+    </footer>
+
+
+    <!-- ربط JavaScript -->
+    <script src="christmas-script.js"></script>
+
+</body>
+
+</html>
